@@ -364,143 +364,233 @@ async function getIntradayOhlc() {
     let isRS = false;
 
     const { symbol } = listData[i];
-    let fromDate = moment().subtract(30, "days").format("DD/MM/YYYY");
-    let toDate = moment().format("DD/MM/YYYY");
+    let fromDate = moment().subtract(403, "days").format("DD/MM/YYYY");
+    let toDate = moment().subtract(373, "days").format("DD/MM/YYYY");
     let response = await axios.get(
-      `http://localhost:3020/IntradayOhlc?symbol=${symbol}&fromDate=${fromDate}&toDate=${toDate}`
+      `http://localhost:3020/DailyOhlc?symbol=${symbol}&fromDate=${fromDate}&toDate=${toDate}`
     );
-    // console.log(
-    //   `stt: ${i}, symbol: ${symbol}, response: ${
-    //     response.data.data ? response.data.data.length : 0
-    //   }`
-    // );
-    let listSymbol = response.data.data ? response.data.data.reverse() : [];
+    let listSymbol = response.data.data ? response.data.data : [];
+    fromDate = moment().subtract(372, "days").format("DD/MM/YYYY");
+    toDate = moment().subtract(342, "days").format("DD/MM/YYYY");
+    response = await axios.get(
+      `http://localhost:3020/DailyOhlc?symbol=${symbol}&fromDate=${fromDate}&toDate=${toDate}`
+    );
+    listSymbol = response.data.data
+      ? [...listSymbol, ...response.data.data]
+      : listSymbol;
+    fromDate = moment().subtract(341, "days").format("DD/MM/YYYY");
+    toDate = moment().subtract(311, "days").format("DD/MM/YYYY");
+    response = await axios.get(
+      `http://localhost:3020/DailyOhlc?symbol=${symbol}&fromDate=${fromDate}&toDate=${toDate}`
+    );
+    listSymbol = response.data.data
+      ? [...listSymbol, ...response.data.data]
+      : listSymbol;
+    fromDate = moment().subtract(310, "days").format("DD/MM/YYYY");
+    toDate = moment().subtract(280, "days").format("DD/MM/YYYY");
+    response = await axios.get(
+      `http://localhost:3020/DailyOhlc?symbol=${symbol}&fromDate=${fromDate}&toDate=${toDate}`
+    );
+    listSymbol = response.data.data
+      ? [...listSymbol, ...response.data.data]
+      : listSymbol;
+    fromDate = moment().subtract(279, "days").format("DD/MM/YYYY");
+    toDate = moment().subtract(249, "days").format("DD/MM/YYYY");
+    response = await axios.get(
+      `http://localhost:3020/DailyOhlc?symbol=${symbol}&fromDate=${fromDate}&toDate=${toDate}`
+    );
+    listSymbol = response.data.data
+      ? [...listSymbol, ...response.data.data]
+      : listSymbol;
+    fromDate = moment().subtract(248, "days").format("DD/MM/YYYY");
+    toDate = moment().subtract(218, "days").format("DD/MM/YYYY");
+    response = await axios.get(
+      `http://localhost:3020/DailyOhlc?symbol=${symbol}&fromDate=${fromDate}&toDate=${toDate}`
+    );
+    listSymbol = response.data.data
+      ? [...listSymbol, ...response.data.data]
+      : listSymbol;
+    fromDate = moment().subtract(217, "days").format("DD/MM/YYYY");
+    toDate = moment().subtract(187, "days").format("DD/MM/YYYY");
+    response = await axios.get(
+      `http://localhost:3020/DailyOhlc?symbol=${symbol}&fromDate=${fromDate}&toDate=${toDate}`
+    );
+    listSymbol = response.data.data
+      ? [...listSymbol, ...response.data.data]
+      : listSymbol;
+    fromDate = moment().subtract(186, "days").format("DD/MM/YYYY");
+    toDate = moment().subtract(156, "days").format("DD/MM/YYYY");
+    response = await axios.get(
+      `http://localhost:3020/DailyOhlc?symbol=${symbol}&fromDate=${fromDate}&toDate=${toDate}`
+    );
+    listSymbol = response.data.data
+      ? [...listSymbol, ...response.data.data]
+      : listSymbol;
+    fromDate = moment().subtract(155, "days").format("DD/MM/YYYY");
+    toDate = moment().subtract(125, "days").format("DD/MM/YYYY");
+    response = await axios.get(
+      `http://localhost:3020/DailyOhlc?symbol=${symbol}&fromDate=${fromDate}&toDate=${toDate}`
+    );
+    listSymbol = response.data.data
+      ? [...listSymbol, ...response.data.data]
+      : listSymbol;
+    fromDate = moment().subtract(124, "days").format("DD/MM/YYYY");
+    toDate = moment().subtract(94, "days").format("DD/MM/YYYY");
+    response = await axios.get(
+      `http://localhost:3020/DailyOhlc?symbol=${symbol}&fromDate=${fromDate}&toDate=${toDate}`
+    );
+    listSymbol = response.data.data
+      ? [...listSymbol, ...response.data.data]
+      : listSymbol;
+    fromDate = moment().subtract(93, "days").format("DD/MM/YYYY");
+    toDate = moment().subtract(63, "days").format("DD/MM/YYYY");
+    response = await axios.get(
+      `http://localhost:3020/DailyOhlc?symbol=${symbol}&fromDate=${fromDate}&toDate=${toDate}`
+    );
+    listSymbol = response.data.data
+      ? [...listSymbol, ...response.data.data]
+      : listSymbol;
+    fromDate = moment().subtract(62, "days").format("DD/MM/YYYY");
+    toDate = moment().subtract(32, "days").format("DD/MM/YYYY");
+    response = await axios.get(
+      `http://localhost:3020/DailyOhlc?symbol=${symbol}&fromDate=${fromDate}&toDate=${toDate}`
+    );
+    listSymbol = response.data.data
+      ? [...listSymbol, ...response.data.data]
+      : listSymbol;
 
-    console.log("listConfig: ", listConfig.listInterval);
-    for (let i = 0; i < listConfig.listInterval; i++) {
-      const interval = listInterval[i];
-      listSymbol = groupDataByTime(listSymbol, interval);
-      let bPrices = listSymbol
-        ? listSymbol.map((item, index) => {
-            return {
-              symbol: symbol,
-              date: item.TradingDate,
-              time: item.Time,
-              open: item.Open,
-              high: item.High,
-              low: item.Low,
-              close: item.Close,
-              volume: item.Volume,
-            };
-          })
-        : [];
-      let mapPrices = bPrices.map((item, index) => {
-        return +item.close;
-      });
-      // console.log(`symbol: ${symbol}, mapPrices: ${mapPrices.length}`);
-      // console.log("mapPrices: ", mapPrices);
-      let high = bPrices.map((item, index) => {
-        return +item.high;
-      });
-      let low = bPrices.map((item, index) => {
-        return +item.low;
-      });
-      let close = bPrices.map((item, index) => {
-        return +item.close;
-      });
-      let volume = bPrices.map((item, index) => {
-        return +item.volume;
-      });
-      let sma10 = SMA.calculate({ period: 10, values: mapPrices });
-      let sma20 = SMA.calculate({ period: 20, values: mapPrices });
-      let sma50 = SMA.calculate({ period: 50, values: mapPrices });
-      let sma150 = SMA.calculate({ period: 150, values: mapPrices });
-      let sma200 = SMA.calculate({ period: 200, values: mapPrices });
-      // console.log("sma: ", sma);
-      let curSma10 = sma10[sma10.length - 1];
-      let curSma20 = sma20[sma20.length - 1];
-      let curSma50 = sma50[sma50.length - 1];
-      let curSma150 = sma150[sma150.length - 1];
-      let curSma200 = sma200[sma200.length - 1];
-      if (
-        curSma10 > curSma20 &&
-        curSma20 > curSma50 &&
-        curSma50 > curSma150 &&
-        curSma150 > curSma200
-      ) {
-        isMA = true;
-      }
-      let lineSMA = `${moment().format(
-        "HH:mm:ss"
-      )}-${interval}-${symbol}-sma10:${JSON.stringify(
-        curSma10
-      )}- sma20:${JSON.stringify(curSma20)}- sma50:${JSON.stringify(
-        curSma50
-      )}- sma150:${JSON.stringify(curSma150)}- sma200:${JSON.stringify(
-        curSma200
-      )}\n`;
-      fs.appendFileSync("SMA.txt", lineSMA);
-
-      //RSI
-      let rsi = RSI.calculate({ period: 14, values: mapPrices });
-      let curRSI = rsi[rsi.length - 1];
-      let lineRSI = `${moment().format(
-        "HH:mm:ss"
-      )}-${interval}-${symbol}-${JSON.stringify(curRSI)}\n`;
-      fs.appendFileSync("RSI.txt", lineRSI);
-      if ((curRSI > listConfig.RSIValue && listConfig.RSI) || !listConfig.RSI) {
-        isRSI = true;
-        // console.log("curRSI", curRSI, symbol, time);
-      }
-
-      //MACD
-      let macd = MACD.calculate({
-        values: mapPrices,
-        fastPeriod: 5,
-        slowPeriod: 14,
-        signalPeriod: 3,
-        SimpleMAOscillator: false,
-        SimpleMASignal: false,
-      });
-      let curMACD = macd[macd.length - 1];
-      let prevMACD = macd[macd.length - 2];
-      let lineMACD = `${moment().format(
-        "HH:mm:ss"
-      )}-1m-${symbol}-curMACD:${JSON.stringify(
-        curMACD
-      )}-prevMACD:${JSON.stringify(prevMACD)}\n`;
-      fs.appendFileSync("MACD.txt", lineMACD);
-      if (
-        (curMACD > listConfig.MACDValue &&
-          prevMACD < curMACD &&
-          listConfig.MACD) ||
-        !listConfig.MACD
-      ) {
-        isMACD = true;
-      }
-
-      //Checking
-      if (isMA) {
-        listMatchMA.push({
-          symbol: symbol,
-          time: "1m",
-        });
-      }
-      if (isRSI) {
-        listMatchRSI.push({
-          symbol: symbol,
-          time: "1m",
-        });
-      }
-      if (isMACD) {
-        listMatchMACD.push({
-          symbol: symbol,
-          time: "1m",
-        });
-      }
-      //delay 50ms
-      await new Promise((resolve) => setTimeout(resolve, 50));
+    fromDate = moment().subtract(31, "days").format("DD/MM/YYYY");
+    toDate = moment().subtract(1, "days").format("DD/MM/YYYY");
+    response = await axios.get(
+      `http://localhost:3020/DailyOhlc?symbol=${symbol}&fromDate=${fromDate}&toDate=${toDate}`
+    );
+    listSymbol = response.data.data
+      ? [...listSymbol, ...response.data.data]
+      : listSymbol;
+    // listSymbol = groupDataByTime(listSymbol, "2h");
+    let bPrices = listSymbol
+      ? listSymbol.map((item, index) => {
+          return {
+            symbol: symbol,
+            date: item.TradingDate,
+            time: item.Time,
+            open: item.Open,
+            high: item.High,
+            low: item.Low,
+            close: item.Close,
+            volume: item.Volume,
+          };
+        })
+      : [];
+    let mapPrices = bPrices.map((item, index) => {
+      return +item.close;
+    });
+    console.log("length: ", mapPrices.length);
+    if (mapPrices[mapPrices.length - 1] === 0) {
+      mapPrices.pop();
     }
+
+    let high = bPrices.map((item, index) => {
+      return +item.high;
+    });
+    let low = bPrices.map((item, index) => {
+      return +item.low;
+    });
+    let close = bPrices.map((item, index) => {
+      return +item.close;
+    });
+    let volume = bPrices.map((item, index) => {
+      return +item.volume;
+    });
+    let sma10 = SMA.calculate({ period: 10, values: mapPrices });
+    let sma20 = SMA.calculate({ period: 20, values: mapPrices });
+    let sma50 = SMA.calculate({ period: 50, values: mapPrices });
+    let sma150 = SMA.calculate({ period: 150, values: mapPrices });
+    let sma200 = SMA.calculate({ period: 200, values: mapPrices });
+    let curSma10 = sma10[sma10.length - 1];
+    let curSma20 = sma20[sma20.length - 1];
+    let curSma50 = sma50[sma50.length - 1];
+    let curSma150 = sma150[sma150.length - 1];
+    let curSma200 = sma200[sma200.length - 1];
+    let lineSMA = `${moment().format(
+      "HH:mm:ss"
+    )}-${interval}-${symbol}-sma10:${JSON.stringify(
+      curSma10
+    )}- sma20:${JSON.stringify(curSma20)}- sma50:${JSON.stringify(
+      curSma50
+    )}- sma150:${JSON.stringify(curSma150)}- sma200:${JSON.stringify(
+      curSma200
+    )}\n`;
+    fs.appendFileSync("SMA.txt", lineSMA);
+    if (
+      curSma10 > curSma20 &&
+      curSma20 > curSma50 &&
+      curSma50 > curSma150 &&
+      curSma150 > curSma200
+    ) {
+      isMA = true;
+    }
+
+    //RSI
+    let rsi = RSI.calculate({ period: 14, values: mapPrices });
+    let curRSI = rsi[rsi.length - 1];
+    // fs.writeFileSync("mapPrice.txt", mapPrices.reverse().join("\n"));
+    console.log("rsi: ", rsi.reverse());
+    let lineRSI = `${moment().format(
+      "HH:mm:ss"
+    )}-${interval}-${symbol}-${JSON.stringify(curRSI)}\n`;
+    fs.appendFileSync("RSI.txt", lineRSI);
+    if ((curRSI > listConfig.RSIValue && listConfig.RSI) || !listConfig.RSI) {
+      isRSI = true;
+    }
+
+    //MACD
+    let macd = MACD.calculate({
+      values: mapPrices,
+      fastPeriod: 5,
+      slowPeriod: 14,
+      signalPeriod: 3,
+      SimpleMAOscillator: false,
+      SimpleMASignal: false,
+    });
+    let curMACD = macd[macd.length - 1];
+    let prevMACD = macd[macd.length - 2];
+    let lineMACD = `${moment().format(
+      "HH:mm:ss"
+    )}-1m-${symbol}-curMACD:${JSON.stringify(
+      curMACD
+    )}-prevMACD:${JSON.stringify(prevMACD)}\n`;
+    fs.appendFileSync("MACD.txt", lineMACD);
+    if (
+      (curMACD > listConfig.MACDValue &&
+        prevMACD < curMACD &&
+        listConfig.MACD) ||
+      !listConfig.MACD
+    ) {
+      isMACD = true;
+    }
+
+    //Checking
+    if (isMA) {
+      listMatchMA.push({
+        symbol: symbol,
+        time: "1d",
+      });
+    }
+    if (isRSI) {
+      listMatchRSI.push({
+        symbol: symbol,
+        time: "1d",
+      });
+    }
+    if (isMACD) {
+      listMatchMACD.push({
+        symbol: symbol,
+        time: "1d",
+      });
+    }
+    //delay 500ms
+    await new Promise((resolve) => setTimeout(resolve, 500));
   }
 }
 async function startIntraday() {
@@ -524,7 +614,7 @@ async function startDaily() {
 
 startDaily();
 
-async function getIntradayOhlc() {
+async function getDaily() {
   let listData = await query("SELECT symbol from data");
   for (let i = 0; i < listData.length; i++) {
     let isStoch = false;
