@@ -14,7 +14,7 @@
     "axios": "0.18.0",
     "body-parser": "^1.20.2",
     "bollinger-bands": "^3.0.2",
-    "ccxt": "^3.1.14",
+    "ccxt": "^3.1.34",
     "cors": "^2.8.5",
     "delay": "^6.0.0",
     "express": "^4.16.4",

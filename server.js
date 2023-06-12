@@ -7,6 +7,7 @@ const WebSocket = require("ws");
 const TelegramBot = require("node-telegram-bot-api");
 const socketIo = require("socket.io");
 const http = require("http");
+let { groupDataByTime } = require("./convert");
 const telegramBotToken = "6081064704:AAGpOoJig4bTO7-TQlfac6WOHpv81TOUXDI";
 const bot = new TelegramBot(telegramBotToken, { polling: false });
 let chat_id = isProduct ? ["-955808797"] : ["-955808797"];
@@ -102,7 +103,6 @@ app.all("*", function (req, res, next) {
 
 let rawConfig = fs.readFileSync("listConfig.json");
 var listConfig = JSON.parse(rawConfig);
-console.log("listConfig: ", listConfig);
 
 const listIntervals = [
   { interval: "1m", seconds: 60 },
@@ -213,14 +213,8 @@ app.get("/quan_tri_von", async function (req, res) {
       id: index,
       key: item.id,
       stt: index + 1,
-      price: String(itemRealtime ? itemRealtime.close : "").replace(
-        /(.)(?=(\d{3})+$)/g,
-        "$1,"
-      ),
-      volume: String(itemRealtime ? itemRealtime.volume : "").replace(
-        /(.)(?=(\d{3})+$)/g,
-        "$1,"
-      ),
+      price: itemRealtime ? itemRealtime.close : "",
+      volume: itemRealtime ? itemRealtime.volume : "",
     };
   });
   res.send({ error: false, data: mapData, message: "config list." });
@@ -239,6 +233,18 @@ app.put("/quan_tri_von", async function (req, res) {
     data.symbol,
   ]);
   res.send({ error: false, data: data, message: "Cập nhật thành công" });
+});
+
+app.delete("/quan_tri_von", async function (req, res) {
+  let data = req.body;
+  console.log("data", data);
+  if (!data) {
+    return res
+      .status(400)
+      .send({ error: true, message: "Please provide data" });
+  }
+  await query("DELETE FROM quan_tri_von WHERE symbol = ?", [data.symbol]);
+  res.send({ error: false, data: data, message: "Xóa thành công" });
 });
 
 app.post("/input_quan_tri_von", async function (req, res) {
@@ -369,12 +375,274 @@ async function getIntradayOhlc() {
     //   }`
     // );
     let listSymbol = response.data.data ? response.data.data.reverse() : [];
-    // let listSymbol5m = convertToTimeFrame(listSymbol, 5);
-    // let listSymbol15m = convertToTimeFrame(listSymbol, 15);
-    // let listSymbol30m = convertToTimeFrame(listSymbol, 30);
-    // let listSymbol1h = convertToTimeFrame(listSymbol, 60);
-    // let listSymbol4h = convertToTimeFrame(listSymbol, 240);
 
+    console.log("listConfig: ", listConfig.listInterval);
+    for (let i = 0; i < listConfig.listInterval; i++) {
+      const interval = listInterval[i];
+      listSymbol = groupDataByTime(listSymbol, interval);
+      let bPrices = listSymbol
+        ? listSymbol.map((item, index) => {
+            return {
+              symbol: symbol,
+              date: item.TradingDate,
+              time: item.Time,
+              open: item.Open,
+              high: item.High,
+              low: item.Low,
+              close: item.Close,
+              volume: item.Volume,
+            };
+          })
+        : [];
+      let mapPrices = bPrices.map((item, index) => {
+        return +item.close;
+      });
+      // console.log(`symbol: ${symbol}, mapPrices: ${mapPrices.length}`);
+      // console.log("mapPrices: ", mapPrices);
+      let high = bPrices.map((item, index) => {
+        return +item.high;
+      });
+      let low = bPrices.map((item, index) => {
+        return +item.low;
+      });
+      let close = bPrices.map((item, index) => {
+        return +item.close;
+      });
+      let volume = bPrices.map((item, index) => {
+        return +item.volume;
+      });
+      let sma10 = SMA.calculate({ period: 10, values: mapPrices });
+      let sma20 = SMA.calculate({ period: 20, values: mapPrices });
+      let sma50 = SMA.calculate({ period: 50, values: mapPrices });
+      let sma150 = SMA.calculate({ period: 150, values: mapPrices });
+      let sma200 = SMA.calculate({ period: 200, values: mapPrices });
+      // console.log("sma: ", sma);
+      let curSma10 = sma10[sma10.length - 1];
+      let curSma20 = sma20[sma20.length - 1];
+      let curSma50 = sma50[sma50.length - 1];
+      let curSma150 = sma150[sma150.length - 1];
+      let curSma200 = sma200[sma200.length - 1];
+      if (
+        curSma10 > curSma20 &&
+        curSma20 > curSma50 &&
+        curSma50 > curSma150 &&
+        curSma150 > curSma200
+      ) {
+        isMA = true;
+      }
+      let lineSMA = `${moment().format(
+        "HH:mm:ss"
+      )}-${interval}-${symbol}-sma10:${JSON.stringify(
+        curSma10
+      )}- sma20:${JSON.stringify(curSma20)}- sma50:${JSON.stringify(
+        curSma50
+      )}- sma150:${JSON.stringify(curSma150)}- sma200:${JSON.stringify(
+        curSma200
+      )}\n`;
+      fs.appendFileSync("SMA.txt", lineSMA);
+
+      //RSI
+      let rsi = RSI.calculate({ period: 14, values: mapPrices });
+      let curRSI = rsi[rsi.length - 1];
+      let lineRSI = `${moment().format(
+        "HH:mm:ss"
+      )}-${interval}-${symbol}-${JSON.stringify(curRSI)}\n`;
+      fs.appendFileSync("RSI.txt", lineRSI);
+      if ((curRSI > listConfig.RSIValue && listConfig.RSI) || !listConfig.RSI) {
+        isRSI = true;
+        // console.log("curRSI", curRSI, symbol, time);
+      }
+
+      //MACD
+      let macd = MACD.calculate({
+        values: mapPrices,
+        fastPeriod: 5,
+        slowPeriod: 14,
+        signalPeriod: 3,
+        SimpleMAOscillator: false,
+        SimpleMASignal: false,
+      });
+      let curMACD = macd[macd.length - 1];
+      let prevMACD = macd[macd.length - 2];
+      let lineMACD = `${moment().format(
+        "HH:mm:ss"
+      )}-1m-${symbol}-curMACD:${JSON.stringify(
+        curMACD
+      )}-prevMACD:${JSON.stringify(prevMACD)}\n`;
+      fs.appendFileSync("MACD.txt", lineMACD);
+      if (
+        (curMACD > listConfig.MACDValue &&
+          prevMACD < curMACD &&
+          listConfig.MACD) ||
+        !listConfig.MACD
+      ) {
+        isMACD = true;
+      }
+
+      //Checking
+      if (isMA) {
+        listMatchMA.push({
+          symbol: symbol,
+          time: "1m",
+        });
+      }
+      if (isRSI) {
+        listMatchRSI.push({
+          symbol: symbol,
+          time: "1m",
+        });
+      }
+      if (isMACD) {
+        listMatchMACD.push({
+          symbol: symbol,
+          time: "1m",
+        });
+      }
+      //delay 50ms
+      await new Promise((resolve) => setTimeout(resolve, 50));
+    }
+  }
+}
+async function startIntraday() {
+  // while (true) {
+  console.log("Start get new prices");
+  await getIntradayOhlc();
+  await new Promise((resolve) => setTimeout(resolve, 1000 * 5));
+  // }
+}
+
+startIntraday();
+
+async function startDaily() {
+  // while (true) {
+  console.log("Start get new prices");
+  await getDaily();
+  //wait 1 day
+  await new Promise((resolve) => setTimeout(resolve, 1000 * 60 * 60 * 24));
+  // }
+}
+
+startDaily();
+
+async function getIntradayOhlc() {
+  let listData = await query("SELECT symbol from data");
+  for (let i = 0; i < listData.length; i++) {
+    let isStoch = false;
+    let isRSI = false;
+    let isRSIdown = false;
+    let isMFI = false;
+    let isDMI_ADX = false;
+    let isMACD = false;
+    let isEMA = false;
+    let isWilliams = false;
+    let isMA = false;
+    let isRS = false;
+
+    const { symbol } = listData[i];
+    let fromDate = moment().subtract(403, "days").format("DD/MM/YYYY");
+    let toDate = moment().subtract(373, "days").format("DD/MM/YYYY");
+    let response = await axios.get(
+      `http://localhost:3020/DailyOhlc?symbol=${symbol}&fromDate=${fromDate}&toDate=${toDate}`
+    );
+    let listSymbol = response.data.data ? response.data.data : [];
+    fromDate = moment().subtract(372, "days").format("DD/MM/YYYY");
+    toDate = moment().subtract(342, "days").format("DD/MM/YYYY");
+    response = await axios.get(
+      `http://localhost:3020/DailyOhlc?symbol=${symbol}&fromDate=${fromDate}&toDate=${toDate}`
+    );
+    listSymbol = response.data.data
+      ? [...listSymbol, ...response.data.data]
+      : listSymbol;
+    fromDate = moment().subtract(341, "days").format("DD/MM/YYYY");
+    toDate = moment().subtract(311, "days").format("DD/MM/YYYY");
+    response = await axios.get(
+      `http://localhost:3020/DailyOhlc?symbol=${symbol}&fromDate=${fromDate}&toDate=${toDate}`
+    );
+    listSymbol = response.data.data
+      ? [...listSymbol, ...response.data.data]
+      : listSymbol;
+    fromDate = moment().subtract(310, "days").format("DD/MM/YYYY");
+    toDate = moment().subtract(280, "days").format("DD/MM/YYYY");
+    response = await axios.get(
+      `http://localhost:3020/DailyOhlc?symbol=${symbol}&fromDate=${fromDate}&toDate=${toDate}`
+    );
+    listSymbol = response.data.data
+      ? [...listSymbol, ...response.data.data]
+      : listSymbol;
+    fromDate = moment().subtract(279, "days").format("DD/MM/YYYY");
+    toDate = moment().subtract(249, "days").format("DD/MM/YYYY");
+    response = await axios.get(
+      `http://localhost:3020/DailyOhlc?symbol=${symbol}&fromDate=${fromDate}&toDate=${toDate}`
+    );
+    listSymbol = response.data.data
+      ? [...listSymbol, ...response.data.data]
+      : listSymbol;
+    fromDate = moment().subtract(248, "days").format("DD/MM/YYYY");
+    toDate = moment().subtract(218, "days").format("DD/MM/YYYY");
+    response = await axios.get(
+      `http://localhost:3020/DailyOhlc?symbol=${symbol}&fromDate=${fromDate}&toDate=${toDate}`
+    );
+    listSymbol = response.data.data
+      ? [...listSymbol, ...response.data.data]
+      : listSymbol;
+    fromDate = moment().subtract(217, "days").format("DD/MM/YYYY");
+    toDate = moment().subtract(187, "days").format("DD/MM/YYYY");
+    response = await axios.get(
+      `http://localhost:3020/DailyOhlc?symbol=${symbol}&fromDate=${fromDate}&toDate=${toDate}`
+    );
+    listSymbol = response.data.data
+      ? [...listSymbol, ...response.data.data]
+      : listSymbol;
+    fromDate = moment().subtract(186, "days").format("DD/MM/YYYY");
+    toDate = moment().subtract(156, "days").format("DD/MM/YYYY");
+    response = await axios.get(
+      `http://localhost:3020/DailyOhlc?symbol=${symbol}&fromDate=${fromDate}&toDate=${toDate}`
+    );
+    listSymbol = response.data.data
+      ? [...listSymbol, ...response.data.data]
+      : listSymbol;
+    fromDate = moment().subtract(155, "days").format("DD/MM/YYYY");
+    toDate = moment().subtract(125, "days").format("DD/MM/YYYY");
+    response = await axios.get(
+      `http://localhost:3020/DailyOhlc?symbol=${symbol}&fromDate=${fromDate}&toDate=${toDate}`
+    );
+    listSymbol = response.data.data
+      ? [...listSymbol, ...response.data.data]
+      : listSymbol;
+    fromDate = moment().subtract(124, "days").format("DD/MM/YYYY");
+    toDate = moment().subtract(94, "days").format("DD/MM/YYYY");
+    response = await axios.get(
+      `http://localhost:3020/DailyOhlc?symbol=${symbol}&fromDate=${fromDate}&toDate=${toDate}`
+    );
+    listSymbol = response.data.data
+      ? [...listSymbol, ...response.data.data]
+      : listSymbol;
+    fromDate = moment().subtract(93, "days").format("DD/MM/YYYY");
+    toDate = moment().subtract(63, "days").format("DD/MM/YYYY");
+    response = await axios.get(
+      `http://localhost:3020/DailyOhlc?symbol=${symbol}&fromDate=${fromDate}&toDate=${toDate}`
+    );
+    listSymbol = response.data.data
+      ? [...listSymbol, ...response.data.data]
+      : listSymbol;
+    fromDate = moment().subtract(62, "days").format("DD/MM/YYYY");
+    toDate = moment().subtract(32, "days").format("DD/MM/YYYY");
+    response = await axios.get(
+      `http://localhost:3020/DailyOhlc?symbol=${symbol}&fromDate=${fromDate}&toDate=${toDate}`
+    );
+    listSymbol = response.data.data
+      ? [...listSymbol, ...response.data.data]
+      : listSymbol;
+
+    fromDate = moment().subtract(31, "days").format("DD/MM/YYYY");
+    toDate = moment().subtract(1, "days").format("DD/MM/YYYY");
+    response = await axios.get(
+      `http://localhost:3020/DailyOhlc?symbol=${symbol}&fromDate=${fromDate}&toDate=${toDate}`
+    );
+    listSymbol = response.data.data
+      ? [...listSymbol, ...response.data.data]
+      : listSymbol;
+    // listSymbol = groupDataByTime(listSymbol, "2h");
     let bPrices = listSymbol
       ? listSymbol.map((item, index) => {
           return {
@@ -392,8 +660,11 @@ async function getIntradayOhlc() {
     let mapPrices = bPrices.map((item, index) => {
       return +item.close;
     });
-    // console.log(`symbol: ${symbol}, mapPrices: ${mapPrices.length}`);
-    // console.log("mapPrices: ", mapPrices);
+    console.log("length: ", mapPrices.length);
+    if (mapPrices[mapPrices.length - 1] === 0) {
+      mapPrices.pop();
+    }
+
     let high = bPrices.map((item, index) => {
       return +item.high;
     });
@@ -406,28 +677,46 @@ async function getIntradayOhlc() {
     let volume = bPrices.map((item, index) => {
       return +item.volume;
     });
-    let sma = SMA.calculate({ period: 9, values: mapPrices });
-    // console.log("sma: ", sma);
-    let curSma = sma[sma.length - 1];
-    let lineSMA = `${moment().format("HH:mm:ss")}-1m-${symbol}-${JSON.stringify(
-      curSma
+    let sma10 = SMA.calculate({ period: 10, values: mapPrices });
+    let sma20 = SMA.calculate({ period: 20, values: mapPrices });
+    let sma50 = SMA.calculate({ period: 50, values: mapPrices });
+    let sma150 = SMA.calculate({ period: 150, values: mapPrices });
+    let sma200 = SMA.calculate({ period: 200, values: mapPrices });
+    let curSma10 = sma10[sma10.length - 1];
+    let curSma20 = sma20[sma20.length - 1];
+    let curSma50 = sma50[sma50.length - 1];
+    let curSma150 = sma150[sma150.length - 1];
+    let curSma200 = sma200[sma200.length - 1];
+    let lineSMA = `${moment().format(
+      "HH:mm:ss"
+    )}-${interval}-${symbol}-sma10:${JSON.stringify(
+      curSma10
+    )}- sma20:${JSON.stringify(curSma20)}- sma50:${JSON.stringify(
+      curSma50
+    )}- sma150:${JSON.stringify(curSma150)}- sma200:${JSON.stringify(
+      curSma200
     )}\n`;
     fs.appendFileSync("SMA.txt", lineSMA);
-    if ((curSma > listConfig.MAValue && listConfig.RSI) || !listConfig.MA) {
+    if (
+      curSma10 > curSma20 &&
+      curSma20 > curSma50 &&
+      curSma50 > curSma150 &&
+      curSma150 > curSma200
+    ) {
       isMA = true;
     }
-    // console.log(`stt: ${i}, symbol: ${symbol}, curSma: ${curSma}`);
 
     //RSI
     let rsi = RSI.calculate({ period: 14, values: mapPrices });
     let curRSI = rsi[rsi.length - 1];
-    let lineRSI = `${moment().format("HH:mm:ss")}-1m-${symbol}-${JSON.stringify(
-      curRSI
-    )}\n`;
+    // fs.writeFileSync("mapPrice.txt", mapPrices.reverse().join("\n"));
+    console.log("rsi: ", rsi.reverse());
+    let lineRSI = `${moment().format(
+      "HH:mm:ss"
+    )}-${interval}-${symbol}-${JSON.stringify(curRSI)}\n`;
     fs.appendFileSync("RSI.txt", lineRSI);
     if ((curRSI > listConfig.RSIValue && listConfig.RSI) || !listConfig.RSI) {
       isRSI = true;
-      // console.log("curRSI", curRSI, symbol, time);
     }
 
     //MACD
@@ -460,34 +749,25 @@ async function getIntradayOhlc() {
     if (isMA) {
       listMatchMA.push({
         symbol: symbol,
-        time: "1m",
+        time: "1d",
       });
     }
     if (isRSI) {
       listMatchRSI.push({
         symbol: symbol,
-        time: "1m",
+        time: "1d",
       });
     }
     if (isMACD) {
       listMatchMACD.push({
         symbol: symbol,
-        time: "1m",
+        time: "1d",
       });
     }
-    //delay 50ms
-    await new Promise((resolve) => setTimeout(resolve, 50));
+    //delay 500ms
+    await new Promise((resolve) => setTimeout(resolve, 500));
   }
 }
-async function start() {
-  // while (true) {
-  console.log("Start get new prices");
-  await getIntradayOhlc();
-  await new Promise((resolve) => setTimeout(resolve, 1000 * 5));
-  // }
-}
-
-start();
 
 // async function tradingsymbol(symbol, time, isFirstTime) {
 //   async function main() {
@@ -954,27 +1234,27 @@ start();
 
 // run(listConfig.listsymbol, listConfig.listInterval, true);
 
-const server = http.createServer(app);
-const io = socketIo(server, {
-  cors: {
-    origin: "*",
-  },
-});
+// const server = http.createServer(app);
+// const io = socketIo(server, {
+//   cors: {
+//     origin: "*",
+//   },
+// });
 
-io.on("connection", (socket) => {
-  console.log("New client connected");
-  socket.on("disconnect", () => console.log("Client disconnected"));
-});
+// io.on("connection", (socket) => {
+//   console.log("New client connected");
+//   socket.on("disconnect", () => console.log("Client disconnected"));
+// });
 
-setInterval(async () => {
-  let rows = await query("SELECT * from data");
-  io.sockets.emit("FromAPI", rows);
-}, 1000);
+// setInterval(async () => {
+//   let rows = await query("SELECT * from data");
+//   io.sockets.emit("FromAPI", rows);
+// }, 1000);
 
-const portSocket = 7000;
+// const portSocket = 7000;
 
-server.listen(portSocket, () =>
-  console.log(`Socket is listening on port ${portSocket}`)
-);
+// server.listen(portSocket, () =>
+//   console.log(`Socket is listening on port ${portSocket}`)
+// );
 
 module.exports = app;

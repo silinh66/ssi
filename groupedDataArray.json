@@ -1,0 +1,2426 @@
+[
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67100",
+      "TradingDate": "26/05/2023",
+      "Time": "14:45:01",
+      "Open": "67100",
+      "High": "67100",
+      "Low": "67100",
+      "Close": "67100",
+      "Volume": "57500"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67200",
+      "TradingDate": "26/05/2023",
+      "Time": "14:29:47",
+      "Open": "67300",
+      "High": "67300",
+      "Low": "67200",
+      "Close": "67200",
+      "Volume": "10700"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67200",
+      "TradingDate": "26/05/2023",
+      "Time": "14:27:46",
+      "Open": "67300",
+      "High": "67300",
+      "Low": "67200",
+      "Close": "67200",
+      "Volume": "1600"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67200",
+      "TradingDate": "26/05/2023",
+      "Time": "14:26:28",
+      "Open": "67300",
+      "High": "67300",
+      "Low": "67200",
+      "Close": "67200",
+      "Volume": "400"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67200",
+      "TradingDate": "26/05/2023",
+      "Time": "14:25:55",
+      "Open": "67300",
+      "High": "67300",
+      "Low": "67200",
+      "Close": "67200",
+      "Volume": "2600"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67300",
+      "TradingDate": "26/05/2023",
+      "Time": "14:24:44",
+      "Open": "67200",
+      "High": "67300",
+      "Low": "67200",
+      "Close": "67300",
+      "Volume": "600"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67300",
+      "TradingDate": "26/05/2023",
+      "Time": "14:21:58",
+      "Open": "67300",
+      "High": "67300",
+      "Low": "67200",
+      "Close": "67300",
+      "Volume": "600"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67200",
+      "TradingDate": "26/05/2023",
+      "Time": "14:20:57",
+      "Open": "67200",
+      "High": "67300",
+      "Low": "67200",
+      "Close": "67200",
+      "Volume": "9700"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67200",
+      "TradingDate": "26/05/2023",
+      "Time": "14:19:46",
+      "Open": "67300",
+      "High": "67300",
+      "Low": "67200",
+      "Close": "67200",
+      "Volume": "15100"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67300",
+      "TradingDate": "26/05/2023",
+      "Time": "14:18:24",
+      "Open": "67300",
+      "High": "67300",
+      "Low": "67300",
+      "Close": "67300",
+      "Volume": "400"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67200",
+      "TradingDate": "26/05/2023",
+      "Time": "14:17:52",
+      "Open": "67200",
+      "High": "67300",
+      "Low": "67200",
+      "Close": "67200",
+      "Volume": "5000"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67200",
+      "TradingDate": "26/05/2023",
+      "Time": "14:16:19",
+      "Open": "67200",
+      "High": "67200",
+      "Low": "67200",
+      "Close": "67200",
+      "Volume": "2300"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67300",
+      "TradingDate": "26/05/2023",
+      "Time": "14:15:43",
+      "Open": "67300",
+      "High": "67300",
+      "Low": "67300",
+      "Close": "67300",
+      "Volume": "500"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67300",
+      "TradingDate": "26/05/2023",
+      "Time": "14:14:46",
+      "Open": "67300",
+      "High": "67300",
+      "Low": "67300",
+      "Close": "67300",
+      "Volume": "600"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67300",
+      "TradingDate": "26/05/2023",
+      "Time": "14:13:50",
+      "Open": "67300",
+      "High": "67300",
+      "Low": "67300",
+      "Close": "67300",
+      "Volume": "400"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67200",
+      "TradingDate": "26/05/2023",
+      "Time": "14:12:51",
+      "Open": "67200",
+      "High": "67200",
+      "Low": "67200",
+      "Close": "67200",
+      "Volume": "1300"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67300",
+      "TradingDate": "26/05/2023",
+      "Time": "14:11:53",
+      "Open": "67400",
+      "High": "67400",
+      "Low": "67300",
+      "Close": "67300",
+      "Volume": "4200"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67400",
+      "TradingDate": "26/05/2023",
+      "Time": "14:10:53",
+      "Open": "67300",
+      "High": "67400",
+      "Low": "67300",
+      "Close": "67400",
+      "Volume": "1800"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67200",
+      "TradingDate": "26/05/2023",
+      "Time": "14:09:53",
+      "Open": "67300",
+      "High": "67300",
+      "Low": "67200",
+      "Close": "67200",
+      "Volume": "6700"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67400",
+      "TradingDate": "26/05/2023",
+      "Time": "14:07:58",
+      "Open": "67400",
+      "High": "67400",
+      "Low": "67400",
+      "Close": "67400",
+      "Volume": "600"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67400",
+      "TradingDate": "26/05/2023",
+      "Time": "14:06:46",
+      "Open": "67300",
+      "High": "67400",
+      "Low": "67300",
+      "Close": "67400",
+      "Volume": "5100"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67200",
+      "TradingDate": "26/05/2023",
+      "Time": "14:05:50",
+      "Open": "67300",
+      "High": "67300",
+      "Low": "67200",
+      "Close": "67200",
+      "Volume": "1100"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67300",
+      "TradingDate": "26/05/2023",
+      "Time": "14:04:43",
+      "Open": "67300",
+      "High": "67300",
+      "Low": "67300",
+      "Close": "67300",
+      "Volume": "1800"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67300",
+      "TradingDate": "26/05/2023",
+      "Time": "14:03:48",
+      "Open": "67300",
+      "High": "67300",
+      "Low": "67200",
+      "Close": "67300",
+      "Volume": "2500"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67200",
+      "TradingDate": "26/05/2023",
+      "Time": "14:02:56",
+      "Open": "67200",
+      "High": "67200",
+      "Low": "67200",
+      "Close": "67200",
+      "Volume": "500"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67200",
+      "TradingDate": "26/05/2023",
+      "Time": "14:01:41",
+      "Open": "67300",
+      "High": "67300",
+      "Low": "67200",
+      "Close": "67200",
+      "Volume": "12700"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67400",
+      "TradingDate": "26/05/2023",
+      "Time": "14:00:54",
+      "Open": "67400",
+      "High": "67400",
+      "Low": "67300",
+      "Close": "67400",
+      "Volume": "12000"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67400",
+      "TradingDate": "26/05/2023",
+      "Time": "13:59:55",
+      "Open": "67400",
+      "High": "67400",
+      "Low": "67400",
+      "Close": "67400",
+      "Volume": "200"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67400",
+      "TradingDate": "26/05/2023",
+      "Time": "13:58:11",
+      "Open": "67400",
+      "High": "67400",
+      "Low": "67400",
+      "Close": "67400",
+      "Volume": "200"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67300",
+      "TradingDate": "26/05/2023",
+      "Time": "13:57:58",
+      "Open": "67400",
+      "High": "67400",
+      "Low": "67300",
+      "Close": "67300",
+      "Volume": "300"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67400",
+      "TradingDate": "26/05/2023",
+      "Time": "13:56:58",
+      "Open": "67400",
+      "High": "67400",
+      "Low": "67400",
+      "Close": "67400",
+      "Volume": "1400"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67400",
+      "TradingDate": "26/05/2023",
+      "Time": "13:55:30",
+      "Open": "67400",
+      "High": "67400",
+      "Low": "67400",
+      "Close": "67400",
+      "Volume": "10400"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67500",
+      "TradingDate": "26/05/2023",
+      "Time": "13:54:33",
+      "Open": "67500",
+      "High": "67500",
+      "Low": "67500",
+      "Close": "67500",
+      "Volume": "200"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67400",
+      "TradingDate": "26/05/2023",
+      "Time": "13:53:56",
+      "Open": "67500",
+      "High": "67500",
+      "Low": "67400",
+      "Close": "67400",
+      "Volume": "2000"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67500",
+      "TradingDate": "26/05/2023",
+      "Time": "13:52:50",
+      "Open": "67500",
+      "High": "67500",
+      "Low": "67500",
+      "Close": "67500",
+      "Volume": "2200"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67400",
+      "TradingDate": "26/05/2023",
+      "Time": "13:51:46",
+      "Open": "67400",
+      "High": "67400",
+      "Low": "67400",
+      "Close": "67400",
+      "Volume": "600"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67400",
+      "TradingDate": "26/05/2023",
+      "Time": "13:50:33",
+      "Open": "67500",
+      "High": "67500",
+      "Low": "67400",
+      "Close": "67400",
+      "Volume": "1900"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67500",
+      "TradingDate": "26/05/2023",
+      "Time": "13:49:59",
+      "Open": "67400",
+      "High": "67500",
+      "Low": "67400",
+      "Close": "67500",
+      "Volume": "1400"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67400",
+      "TradingDate": "26/05/2023",
+      "Time": "13:48:16",
+      "Open": "67400",
+      "High": "67400",
+      "Low": "67400",
+      "Close": "67400",
+      "Volume": "4000"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67400",
+      "TradingDate": "26/05/2023",
+      "Time": "13:47:39",
+      "Open": "67400",
+      "High": "67400",
+      "Low": "67400",
+      "Close": "67400",
+      "Volume": "200"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67500",
+      "TradingDate": "26/05/2023",
+      "Time": "13:46:53",
+      "Open": "67500",
+      "High": "67500",
+      "Low": "67500",
+      "Close": "67500",
+      "Volume": "5000"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67500",
+      "TradingDate": "26/05/2023",
+      "Time": "13:45:42",
+      "Open": "67400",
+      "High": "67500",
+      "Low": "67400",
+      "Close": "67500",
+      "Volume": "2100"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67400",
+      "TradingDate": "26/05/2023",
+      "Time": "13:44:57",
+      "Open": "67400",
+      "High": "67400",
+      "Low": "67400",
+      "Close": "67400",
+      "Volume": "2000"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67500",
+      "TradingDate": "26/05/2023",
+      "Time": "13:43:31",
+      "Open": "67500",
+      "High": "67500",
+      "Low": "67500",
+      "Close": "67500",
+      "Volume": "600"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67500",
+      "TradingDate": "26/05/2023",
+      "Time": "13:42:51",
+      "Open": "67400",
+      "High": "67500",
+      "Low": "67400",
+      "Close": "67500",
+      "Volume": "300"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67500",
+      "TradingDate": "26/05/2023",
+      "Time": "13:41:43",
+      "Open": "67400",
+      "High": "67500",
+      "Low": "67400",
+      "Close": "67500",
+      "Volume": "6000"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67400",
+      "TradingDate": "26/05/2023",
+      "Time": "13:40:54",
+      "Open": "67400",
+      "High": "67500",
+      "Low": "67400",
+      "Close": "67400",
+      "Volume": "1300"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67500",
+      "TradingDate": "26/05/2023",
+      "Time": "13:39:47",
+      "Open": "67500",
+      "High": "67500",
+      "Low": "67400",
+      "Close": "67500",
+      "Volume": "1300"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67500",
+      "TradingDate": "26/05/2023",
+      "Time": "13:37:07",
+      "Open": "67500",
+      "High": "67500",
+      "Low": "67500",
+      "Close": "67500",
+      "Volume": "100"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67500",
+      "TradingDate": "26/05/2023",
+      "Time": "13:36:53",
+      "Open": "67600",
+      "High": "67600",
+      "Low": "67500",
+      "Close": "67500",
+      "Volume": "6100"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "13:35:59",
+      "Open": "67500",
+      "High": "67600",
+      "Low": "67500",
+      "Close": "67600",
+      "Volume": "21600"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67500",
+      "TradingDate": "26/05/2023",
+      "Time": "13:34:57",
+      "Open": "67500",
+      "High": "67600",
+      "Low": "67500",
+      "Close": "67500",
+      "Volume": "24800"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67500",
+      "TradingDate": "26/05/2023",
+      "Time": "13:33:37",
+      "Open": "67500",
+      "High": "67500",
+      "Low": "67500",
+      "Close": "67500",
+      "Volume": "400"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67500",
+      "TradingDate": "26/05/2023",
+      "Time": "13:32:49",
+      "Open": "67400",
+      "High": "67500",
+      "Low": "67400",
+      "Close": "67500",
+      "Volume": "1300"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67400",
+      "TradingDate": "26/05/2023",
+      "Time": "13:31:22",
+      "Open": "67500",
+      "High": "67500",
+      "Low": "67400",
+      "Close": "67400",
+      "Volume": "300"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67500",
+      "TradingDate": "26/05/2023",
+      "Time": "13:30:49",
+      "Open": "67500",
+      "High": "67500",
+      "Low": "67400",
+      "Close": "67500",
+      "Volume": "3200"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67500",
+      "TradingDate": "26/05/2023",
+      "Time": "13:29:43",
+      "Open": "67500",
+      "High": "67500",
+      "Low": "67500",
+      "Close": "67500",
+      "Volume": "10300"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67500",
+      "TradingDate": "26/05/2023",
+      "Time": "13:28:53",
+      "Open": "67500",
+      "High": "67500",
+      "Low": "67400",
+      "Close": "67500",
+      "Volume": "3400"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67500",
+      "TradingDate": "26/05/2023",
+      "Time": "13:27:11",
+      "Open": "67500",
+      "High": "67500",
+      "Low": "67500",
+      "Close": "67500",
+      "Volume": "2100"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67500",
+      "TradingDate": "26/05/2023",
+      "Time": "13:26:57",
+      "Open": "67500",
+      "High": "67600",
+      "Low": "67500",
+      "Close": "67500",
+      "Volume": "21900"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "13:25:52",
+      "Open": "67600",
+      "High": "67600",
+      "Low": "67500",
+      "Close": "67600",
+      "Volume": "2700"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "13:24:51",
+      "Open": "67500",
+      "High": "67600",
+      "Low": "67500",
+      "Close": "67600",
+      "Volume": "3300"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67500",
+      "TradingDate": "26/05/2023",
+      "Time": "13:23:59",
+      "Open": "67600",
+      "High": "67600",
+      "Low": "67500",
+      "Close": "67500",
+      "Volume": "8300"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "13:22:30",
+      "Open": "67600",
+      "High": "67600",
+      "Low": "67500",
+      "Close": "67600",
+      "Volume": "8900"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "13:21:51",
+      "Open": "67500",
+      "High": "67600",
+      "Low": "67500",
+      "Close": "67600",
+      "Volume": "6300"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67500",
+      "TradingDate": "26/05/2023",
+      "Time": "13:20:49",
+      "Open": "67600",
+      "High": "67600",
+      "Low": "67500",
+      "Close": "67500",
+      "Volume": "11200"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "13:19:03",
+      "Open": "67600",
+      "High": "67600",
+      "Low": "67600",
+      "Close": "67600",
+      "Volume": "100"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "13:18:53",
+      "Open": "67600",
+      "High": "67600",
+      "Low": "67500",
+      "Close": "67600",
+      "Volume": "2700"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67500",
+      "TradingDate": "26/05/2023",
+      "Time": "13:17:53",
+      "Open": "67500",
+      "High": "67600",
+      "Low": "67500",
+      "Close": "67500",
+      "Volume": "6000"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67500",
+      "TradingDate": "26/05/2023",
+      "Time": "13:16:49",
+      "Open": "67500",
+      "High": "67500",
+      "Low": "67500",
+      "Close": "67500",
+      "Volume": "2600"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67500",
+      "TradingDate": "26/05/2023",
+      "Time": "13:15:54",
+      "Open": "67500",
+      "High": "67600",
+      "Low": "67500",
+      "Close": "67500",
+      "Volume": "4300"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "13:14:58",
+      "Open": "67500",
+      "High": "67600",
+      "Low": "67500",
+      "Close": "67600",
+      "Volume": "600"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "13:13:51",
+      "Open": "67600",
+      "High": "67600",
+      "Low": "67500",
+      "Close": "67600",
+      "Volume": "2100"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "13:12:55",
+      "Open": "67600",
+      "High": "67600",
+      "Low": "67500",
+      "Close": "67600",
+      "Volume": "1000"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "13:11:46",
+      "Open": "67600",
+      "High": "67600",
+      "Low": "67600",
+      "Close": "67600",
+      "Volume": "700"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "13:10:21",
+      "Open": "67600",
+      "High": "67600",
+      "Low": "67600",
+      "Close": "67600",
+      "Volume": "3000"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "13:09:24",
+      "Open": "67600",
+      "High": "67600",
+      "Low": "67600",
+      "Close": "67600",
+      "Volume": "100"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67500",
+      "TradingDate": "26/05/2023",
+      "Time": "13:08:33",
+      "Open": "67500",
+      "High": "67500",
+      "Low": "67500",
+      "Close": "67500",
+      "Volume": "1300"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67500",
+      "TradingDate": "26/05/2023",
+      "Time": "13:07:48",
+      "Open": "67500",
+      "High": "67500",
+      "Low": "67400",
+      "Close": "67500",
+      "Volume": "4000"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67500",
+      "TradingDate": "26/05/2023",
+      "Time": "13:06:56",
+      "Open": "67500",
+      "High": "67600",
+      "Low": "67500",
+      "Close": "67500",
+      "Volume": "15800"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67500",
+      "TradingDate": "26/05/2023",
+      "Time": "13:05:56",
+      "Open": "67500",
+      "High": "67500",
+      "Low": "67500",
+      "Close": "67500",
+      "Volume": "1200"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67500",
+      "TradingDate": "26/05/2023",
+      "Time": "13:04:35",
+      "Open": "67400",
+      "High": "67500",
+      "Low": "67400",
+      "Close": "67500",
+      "Volume": "10600"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67500",
+      "TradingDate": "26/05/2023",
+      "Time": "13:03:29",
+      "Open": "67500",
+      "High": "67500",
+      "Low": "67500",
+      "Close": "67500",
+      "Volume": "1000"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67500",
+      "TradingDate": "26/05/2023",
+      "Time": "13:02:46",
+      "Open": "67500",
+      "High": "67500",
+      "Low": "67500",
+      "Close": "67500",
+      "Volume": "8800"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67500",
+      "TradingDate": "26/05/2023",
+      "Time": "13:01:58",
+      "Open": "67600",
+      "High": "67600",
+      "Low": "67500",
+      "Close": "67500",
+      "Volume": "25500"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "13:00:59",
+      "Open": "67600",
+      "High": "67700",
+      "Low": "67500",
+      "Close": "67600",
+      "Volume": "37800"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "11:29:41",
+      "Open": "67600",
+      "High": "67600",
+      "Low": "67600",
+      "Close": "67600",
+      "Volume": "700"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "11:28:50",
+      "Open": "67600",
+      "High": "67700",
+      "Low": "67600",
+      "Close": "67700",
+      "Volume": "1000"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "11:27:46",
+      "Open": "67700",
+      "High": "67700",
+      "Low": "67600",
+      "Close": "67600",
+      "Volume": "10400"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "11:26:53",
+      "Open": "67600",
+      "High": "67600",
+      "Low": "67600",
+      "Close": "67600",
+      "Volume": "2000"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "11:25:52",
+      "Open": "67600",
+      "High": "67600",
+      "Low": "67600",
+      "Close": "67600",
+      "Volume": "500"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "11:24:57",
+      "Open": "67700",
+      "High": "67700",
+      "Low": "67600",
+      "Close": "67600",
+      "Volume": "1300"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "11:23:43",
+      "Open": "67600",
+      "High": "67700",
+      "Low": "67600",
+      "Close": "67700",
+      "Volume": "1000"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "11:20:43",
+      "Open": "67600",
+      "High": "67700",
+      "Low": "67600",
+      "Close": "67700",
+      "Volume": "1300"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "11:19:12",
+      "Open": "67700",
+      "High": "67700",
+      "Low": "67700",
+      "Close": "67700",
+      "Volume": "100"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "11:17:14",
+      "Open": "67600",
+      "High": "67700",
+      "Low": "67600",
+      "Close": "67700",
+      "Volume": "7100"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "11:16:58",
+      "Open": "67600",
+      "High": "67600",
+      "Low": "67600",
+      "Close": "67600",
+      "Volume": "1900"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "11:15:32",
+      "Open": "67600",
+      "High": "67600",
+      "Low": "67600",
+      "Close": "67600",
+      "Volume": "1200"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "11:14:53",
+      "Open": "67600",
+      "High": "67600",
+      "Low": "67600",
+      "Close": "67600",
+      "Volume": "6200"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "11:13:40",
+      "Open": "67600",
+      "High": "67600",
+      "Low": "67600",
+      "Close": "67600",
+      "Volume": "700"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67500",
+      "TradingDate": "26/05/2023",
+      "Time": "11:12:48",
+      "Open": "67500",
+      "High": "67500",
+      "Low": "67500",
+      "Close": "67500",
+      "Volume": "10000"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "11:11:34",
+      "Open": "67600",
+      "High": "67600",
+      "Low": "67600",
+      "Close": "67600",
+      "Volume": "3600"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "11:10:22",
+      "Open": "67600",
+      "High": "67600",
+      "Low": "67600",
+      "Close": "67600",
+      "Volume": "600"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "11:09:51",
+      "Open": "67600",
+      "High": "67600",
+      "Low": "67600",
+      "Close": "67600",
+      "Volume": "400"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "11:08:46",
+      "Open": "67600",
+      "High": "67600",
+      "Low": "67600",
+      "Close": "67600",
+      "Volume": "100"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67500",
+      "TradingDate": "26/05/2023",
+      "Time": "11:07:58",
+      "Open": "67500",
+      "High": "67500",
+      "Low": "67500",
+      "Close": "67500",
+      "Volume": "6100"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "11:06:34",
+      "Open": "67600",
+      "High": "67700",
+      "Low": "67600",
+      "Close": "67600",
+      "Volume": "14500"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "11:05:48",
+      "Open": "67600",
+      "High": "67600",
+      "Low": "67600",
+      "Close": "67600",
+      "Volume": "700"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "11:04:46",
+      "Open": "67700",
+      "High": "67700",
+      "Low": "67600",
+      "Close": "67600",
+      "Volume": "600"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "11:03:09",
+      "Open": "67700",
+      "High": "67700",
+      "Low": "67700",
+      "Close": "67700",
+      "Volume": "300"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "11:02:58",
+      "Open": "67700",
+      "High": "67700",
+      "Low": "67700",
+      "Close": "67700",
+      "Volume": "700"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "11:01:50",
+      "Open": "67600",
+      "High": "67600",
+      "Low": "67600",
+      "Close": "67600",
+      "Volume": "500"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "11:00:29",
+      "Open": "67700",
+      "High": "67700",
+      "Low": "67700",
+      "Close": "67700",
+      "Volume": "200"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "10:59:58",
+      "Open": "67600",
+      "High": "67700",
+      "Low": "67600",
+      "Close": "67700",
+      "Volume": "3800"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "10:58:55",
+      "Open": "67600",
+      "High": "67600",
+      "Low": "67600",
+      "Close": "67600",
+      "Volume": "100"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "10:57:40",
+      "Open": "67700",
+      "High": "67700",
+      "Low": "67600",
+      "Close": "67700",
+      "Volume": "400"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "10:56:22",
+      "Open": "67700",
+      "High": "67700",
+      "Low": "67700",
+      "Close": "67700",
+      "Volume": "600"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "10:55:28",
+      "Open": "67600",
+      "High": "67700",
+      "Low": "67500",
+      "Close": "67700",
+      "Volume": "30300"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "10:53:06",
+      "Open": "67600",
+      "High": "67600",
+      "Low": "67600",
+      "Close": "67600",
+      "Volume": "100"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "10:52:50",
+      "Open": "67600",
+      "High": "67600",
+      "Low": "67600",
+      "Close": "67600",
+      "Volume": "900"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "10:51:30",
+      "Open": "67600",
+      "High": "67600",
+      "Low": "67600",
+      "Close": "67600",
+      "Volume": "100"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "10:50:15",
+      "Open": "67600",
+      "High": "67600",
+      "Low": "67600",
+      "Close": "67600",
+      "Volume": "1000"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "10:49:14",
+      "Open": "67600",
+      "High": "67600",
+      "Low": "67600",
+      "Close": "67600",
+      "Volume": "700"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "10:48:56",
+      "Open": "67600",
+      "High": "67600",
+      "Low": "67600",
+      "Close": "67600",
+      "Volume": "200"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "10:47:14",
+      "Open": "67600",
+      "High": "67600",
+      "Low": "67600",
+      "Close": "67600",
+      "Volume": "100"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "10:46:45",
+      "Open": "67600",
+      "High": "67600",
+      "Low": "67600",
+      "Close": "67600",
+      "Volume": "15000"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "10:45:55",
+      "Open": "67700",
+      "High": "67700",
+      "Low": "67700",
+      "Close": "67700",
+      "Volume": "1800"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "10:44:34",
+      "Open": "67600",
+      "High": "67600",
+      "Low": "67600",
+      "Close": "67600",
+      "Volume": "900"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "10:43:49",
+      "Open": "67700",
+      "High": "67700",
+      "Low": "67700",
+      "Close": "67700",
+      "Volume": "600"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "10:42:40",
+      "Open": "67700",
+      "High": "67700",
+      "Low": "67700",
+      "Close": "67700",
+      "Volume": "1300"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "10:41:59",
+      "Open": "67600",
+      "High": "67700",
+      "Low": "67600",
+      "Close": "67700",
+      "Volume": "1000"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "10:40:50",
+      "Open": "67700",
+      "High": "67700",
+      "Low": "67700",
+      "Close": "67700",
+      "Volume": "100"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "10:39:46",
+      "Open": "67700",
+      "High": "67700",
+      "Low": "67700",
+      "Close": "67700",
+      "Volume": "100"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "10:38:50",
+      "Open": "67700",
+      "High": "67700",
+      "Low": "67700",
+      "Close": "67700",
+      "Volume": "700"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "10:37:27",
+      "Open": "67700",
+      "High": "67700",
+      "Low": "67700",
+      "Close": "67700",
+      "Volume": "300"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "10:36:08",
+      "Open": "67700",
+      "High": "67700",
+      "Low": "67700",
+      "Close": "67700",
+      "Volume": "900"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "10:35:38",
+      "Open": "67700",
+      "High": "67700",
+      "Low": "67700",
+      "Close": "67700",
+      "Volume": "800"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "10:34:55",
+      "Open": "67700",
+      "High": "67700",
+      "Low": "67600",
+      "Close": "67700",
+      "Volume": "900"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "10:33:29",
+      "Open": "67600",
+      "High": "67600",
+      "Low": "67600",
+      "Close": "67600",
+      "Volume": "600"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "10:31:59",
+      "Open": "67800",
+      "High": "67800",
+      "Low": "67600",
+      "Close": "67600",
+      "Volume": "12000"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67800",
+      "TradingDate": "26/05/2023",
+      "Time": "10:30:55",
+      "Open": "67700",
+      "High": "67800",
+      "Low": "67700",
+      "Close": "67800",
+      "Volume": "900"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "10:29:16",
+      "Open": "67700",
+      "High": "67700",
+      "Low": "67700",
+      "Close": "67700",
+      "Volume": "3900"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "10:28:15",
+      "Open": "67700",
+      "High": "67700",
+      "Low": "67700",
+      "Close": "67700",
+      "Volume": "600"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "10:27:46",
+      "Open": "67700",
+      "High": "67700",
+      "Low": "67700",
+      "Close": "67700",
+      "Volume": "700"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "10:26:34",
+      "Open": "67700",
+      "High": "67700",
+      "Low": "67700",
+      "Close": "67700",
+      "Volume": "1300"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "10:25:16",
+      "Open": "67700",
+      "High": "67700",
+      "Low": "67700",
+      "Close": "67700",
+      "Volume": "100"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "10:24:46",
+      "Open": "67700",
+      "High": "67700",
+      "Low": "67700",
+      "Close": "67700",
+      "Volume": "1900"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "10:23:45",
+      "Open": "67600",
+      "High": "67700",
+      "Low": "67600",
+      "Close": "67700",
+      "Volume": "1400"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "10:22:46",
+      "Open": "67700",
+      "High": "67700",
+      "Low": "67700",
+      "Close": "67700",
+      "Volume": "2100"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "10:21:59",
+      "Open": "67800",
+      "High": "67800",
+      "Low": "67700",
+      "Close": "67700",
+      "Volume": "9000"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67800",
+      "TradingDate": "26/05/2023",
+      "Time": "10:20:58",
+      "Open": "67700",
+      "High": "67800",
+      "Low": "67700",
+      "Close": "67800",
+      "Volume": "5700"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67800",
+      "TradingDate": "26/05/2023",
+      "Time": "10:19:56",
+      "Open": "67800",
+      "High": "67900",
+      "Low": "67700",
+      "Close": "67800",
+      "Volume": "15300"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67800",
+      "TradingDate": "26/05/2023",
+      "Time": "10:18:37",
+      "Open": "67800",
+      "High": "67800",
+      "Low": "67800",
+      "Close": "67800",
+      "Volume": "100"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67900",
+      "TradingDate": "26/05/2023",
+      "Time": "10:17:56",
+      "Open": "67900",
+      "High": "67900",
+      "Low": "67900",
+      "Close": "67900",
+      "Volume": "1900"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67900",
+      "TradingDate": "26/05/2023",
+      "Time": "10:16:54",
+      "Open": "67900",
+      "High": "67900",
+      "Low": "67900",
+      "Close": "67900",
+      "Volume": "2800"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67900",
+      "TradingDate": "26/05/2023",
+      "Time": "10:15:56",
+      "Open": "67900",
+      "High": "67900",
+      "Low": "67900",
+      "Close": "67900",
+      "Volume": "7400"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "68000",
+      "TradingDate": "26/05/2023",
+      "Time": "10:14:46",
+      "Open": "68000",
+      "High": "68000",
+      "Low": "68000",
+      "Close": "68000",
+      "Volume": "700"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "68000",
+      "TradingDate": "26/05/2023",
+      "Time": "10:13:58",
+      "Open": "67900",
+      "High": "68000",
+      "Low": "67900",
+      "Close": "68000",
+      "Volume": "12700"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67900",
+      "TradingDate": "26/05/2023",
+      "Time": "10:12:38",
+      "Open": "67900",
+      "High": "67900",
+      "Low": "67900",
+      "Close": "67900",
+      "Volume": "12200"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67900",
+      "TradingDate": "26/05/2023",
+      "Time": "10:11:53",
+      "Open": "67900",
+      "High": "67900",
+      "Low": "67900",
+      "Close": "67900",
+      "Volume": "4000"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67800",
+      "TradingDate": "26/05/2023",
+      "Time": "10:10:51",
+      "Open": "67800",
+      "High": "67800",
+      "Low": "67700",
+      "Close": "67800",
+      "Volume": "18800"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67800",
+      "TradingDate": "26/05/2023",
+      "Time": "10:09:47",
+      "Open": "67800",
+      "High": "67800",
+      "Low": "67800",
+      "Close": "67800",
+      "Volume": "1000"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67800",
+      "TradingDate": "26/05/2023",
+      "Time": "10:08:59",
+      "Open": "67800",
+      "High": "67800",
+      "Low": "67800",
+      "Close": "67800",
+      "Volume": "300"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67800",
+      "TradingDate": "26/05/2023",
+      "Time": "10:07:39",
+      "Open": "67800",
+      "High": "67800",
+      "Low": "67800",
+      "Close": "67800",
+      "Volume": "800"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "10:06:57",
+      "Open": "67600",
+      "High": "67800",
+      "Low": "67600",
+      "Close": "67700",
+      "Volume": "6100"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "10:05:17",
+      "Open": "67600",
+      "High": "67700",
+      "Low": "67600",
+      "Close": "67700",
+      "Volume": "10300"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "10:04:58",
+      "Open": "67600",
+      "High": "67600",
+      "Low": "67600",
+      "Close": "67600",
+      "Volume": "300"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "10:03:57",
+      "Open": "67700",
+      "High": "67700",
+      "Low": "67700",
+      "Close": "67700",
+      "Volume": "4400"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "10:02:44",
+      "Open": "67700",
+      "High": "67700",
+      "Low": "67600",
+      "Close": "67700",
+      "Volume": "300"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "10:00:30",
+      "Open": "67700",
+      "High": "67700",
+      "Low": "67600",
+      "Close": "67700",
+      "Volume": "1900"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "09:59:59",
+      "Open": "67600",
+      "High": "67700",
+      "Low": "67600",
+      "Close": "67600",
+      "Volume": "1300"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "09:58:29",
+      "Open": "67700",
+      "High": "67700",
+      "Low": "67600",
+      "Close": "67600",
+      "Volume": "1100"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "09:57:41",
+      "Open": "67700",
+      "High": "67700",
+      "Low": "67700",
+      "Close": "67700",
+      "Volume": "1500"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "09:56:44",
+      "Open": "67700",
+      "High": "67700",
+      "Low": "67600",
+      "Close": "67700",
+      "Volume": "1200"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "09:55:37",
+      "Open": "67600",
+      "High": "67700",
+      "Low": "67600",
+      "Close": "67700",
+      "Volume": "2200"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "09:54:46",
+      "Open": "67700",
+      "High": "67700",
+      "Low": "67500",
+      "Close": "67600",
+      "Volume": "5500"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "09:53:59",
+      "Open": "67700",
+      "High": "67800",
+      "Low": "67600",
+      "Close": "67700",
+      "Volume": "11400"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "09:52:59",
+      "Open": "67700",
+      "High": "67800",
+      "Low": "67700",
+      "Close": "67700",
+      "Volume": "1900"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67700",
+      "TradingDate": "26/05/2023",
+      "Time": "09:51:59",
+      "Open": "67600",
+      "High": "67700",
+      "Low": "67600",
+      "Close": "67700",
+      "Volume": "9400"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "09:50:54",
+      "Open": "67600",
+      "High": "67600",
+      "Low": "67500",
+      "Close": "67600",
+      "Volume": "10700"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "09:49:46",
+      "Open": "67600",
+      "High": "67600",
+      "Low": "67600",
+      "Close": "67600",
+      "Volume": "12500"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67600",
+      "TradingDate": "26/05/2023",
+      "Time": "09:48:34",
+      "Open": "67500",
+      "High": "67600",
+      "Low": "67500",
+      "Close": "67600",
+      "Volume": "30800"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67400",
+      "TradingDate": "26/05/2023",
+      "Time": "09:47:39",
+      "Open": "67400",
+      "High": "67500",
+      "Low": "67400",
+      "Close": "67400",
+      "Volume": "1200"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67400",
+      "TradingDate": "26/05/2023",
+      "Time": "09:46:49",
+      "Open": "67400",
+      "High": "67400",
+      "Low": "67400",
+      "Close": "67400",
+      "Volume": "9400"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67400",
+      "TradingDate": "26/05/2023",
+      "Time": "09:45:53",
+      "Open": "67400",
+      "High": "67400",
+      "Low": "67400",
+      "Close": "67400",
+      "Volume": "2400"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67400",
+      "TradingDate": "26/05/2023",
+      "Time": "09:44:08",
+      "Open": "67400",
+      "High": "67400",
+      "Low": "67400",
+      "Close": "67400",
+      "Volume": "500"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67400",
+      "TradingDate": "26/05/2023",
+      "Time": "09:43:37",
+      "Open": "67400",
+      "High": "67400",
+      "Low": "67400",
+      "Close": "67400",
+      "Volume": "1100"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67400",
+      "TradingDate": "26/05/2023",
+      "Time": "09:42:56",
+      "Open": "67400",
+      "High": "67400",
+      "Low": "67400",
+      "Close": "67400",
+      "Volume": "1000"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67400",
+      "TradingDate": "26/05/2023",
+      "Time": "09:41:32",
+      "Open": "67300",
+      "High": "67400",
+      "Low": "67300",
+      "Close": "67400",
+      "Volume": "700"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67400",
+      "TradingDate": "26/05/2023",
+      "Time": "09:40:14",
+      "Open": "67400",
+      "High": "67400",
+      "Low": "67400",
+      "Close": "67400",
+      "Volume": "1400"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67400",
+      "TradingDate": "26/05/2023",
+      "Time": "09:39:33",
+      "Open": "67400",
+      "High": "67400",
+      "Low": "67300",
+      "Close": "67400",
+      "Volume": "500"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67400",
+      "TradingDate": "26/05/2023",
+      "Time": "09:38:52",
+      "Open": "67400",
+      "High": "67400",
+      "Low": "67300",
+      "Close": "67400",
+      "Volume": "1600"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67400",
+      "TradingDate": "26/05/2023",
+      "Time": "09:37:39",
+      "Open": "67400",
+      "High": "67400",
+      "Low": "67400",
+      "Close": "67400",
+      "Volume": "3100"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67400",
+      "TradingDate": "26/05/2023",
+      "Time": "09:36:44",
+      "Open": "67300",
+      "High": "67400",
+      "Low": "67300",
+      "Close": "67400",
+      "Volume": "700"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67400",
+      "TradingDate": "26/05/2023",
+      "Time": "09:35:54",
+      "Open": "67300",
+      "High": "67400",
+      "Low": "67300",
+      "Close": "67400",
+      "Volume": "1800"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67400",
+      "TradingDate": "26/05/2023",
+      "Time": "09:34:46",
+      "Open": "67400",
+      "High": "67400",
+      "Low": "67400",
+      "Close": "67400",
+      "Volume": "100"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67400",
+      "TradingDate": "26/05/2023",
+      "Time": "09:32:57",
+      "Open": "67400",
+      "High": "67400",
+      "Low": "67400",
+      "Close": "67400",
+      "Volume": "700"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67400",
+      "TradingDate": "26/05/2023",
+      "Time": "09:31:56",
+      "Open": "67300",
+      "High": "67400",
+      "Low": "67300",
+      "Close": "67400",
+      "Volume": "800"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67300",
+      "TradingDate": "26/05/2023",
+      "Time": "09:30:45",
+      "Open": "67300",
+      "High": "67400",
+      "Low": "67300",
+      "Close": "67300",
+      "Volume": "1200"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67300",
+      "TradingDate": "26/05/2023",
+      "Time": "09:29:58",
+      "Open": "67300",
+      "High": "67300",
+      "Low": "67300",
+      "Close": "67300",
+      "Volume": "1900"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67400",
+      "TradingDate": "26/05/2023",
+      "Time": "09:28:40",
+      "Open": "67300",
+      "High": "67400",
+      "Low": "67300",
+      "Close": "67400",
+      "Volume": "1800"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67300",
+      "TradingDate": "26/05/2023",
+      "Time": "09:27:23",
+      "Open": "67300",
+      "High": "67300",
+      "Low": "67300",
+      "Close": "67300",
+      "Volume": "300"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67300",
+      "TradingDate": "26/05/2023",
+      "Time": "09:26:21",
+      "Open": "67400",
+      "High": "67400",
+      "Low": "67300",
+      "Close": "67300",
+      "Volume": "400"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67300",
+      "TradingDate": "26/05/2023",
+      "Time": "09:25:55",
+      "Open": "67400",
+      "High": "67400",
+      "Low": "67300",
+      "Close": "67300",
+      "Volume": "7100"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67400",
+      "TradingDate": "26/05/2023",
+      "Time": "09:24:57",
+      "Open": "67300",
+      "High": "67400",
+      "Low": "67300",
+      "Close": "67400",
+      "Volume": "2100"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67300",
+      "TradingDate": "26/05/2023",
+      "Time": "09:22:58",
+      "Open": "67300",
+      "High": "67300",
+      "Low": "67300",
+      "Close": "67300",
+      "Volume": "200"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67300",
+      "TradingDate": "26/05/2023",
+      "Time": "09:21:59",
+      "Open": "67200",
+      "High": "67300",
+      "Low": "67200",
+      "Close": "67300",
+      "Volume": "2100"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67300",
+      "TradingDate": "26/05/2023",
+      "Time": "09:20:52",
+      "Open": "67300",
+      "High": "67300",
+      "Low": "67300",
+      "Close": "67300",
+      "Volume": "500"
+    }
+  ],
+  [
+    {
+      "Symbol": "VNM",
+      "Value": "67300",
+      "TradingDate": "26/05/2023",
+      "Time": "09:19:28",
+      "Open": "67200",
+      "High": "67300",
+      "Low": "67200",
+      "Close": "67300",
+      "Volume": "500"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67200",
+      "TradingDate": "26/05/2023",
+      "Time": "09:18:56",
+      "Open": "67100",
+      "High": "67200",
+      "Low": "67100",
+      "Close": "67200",
+      "Volume": "8600"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67200",
+      "TradingDate": "26/05/2023",
+      "Time": "09:17:56",
+      "Open": "67300",
+      "High": "67400",
+      "Low": "67200",
+      "Close": "67200",
+      "Volume": "3100"
+    },
+    {
+      "Symbol": "VNM",
+      "Value": "67300",
+      "TradingDate": "26/05/2023",
+      "Time": "09:16:58",
+      "Open": "67400",
+      "High": "67400",
+      "Low": "67300",
+      "Close": "67300",
+      "Volume": "3200"
+    }
+  ]
+]
