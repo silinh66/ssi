@@ -3,6 +3,7 @@ data = data.reverse();
 const fs = require("fs");
 
 function groupDataByTime(data, interval) {
+  fs.writeFileSync("data.json", JSON.stringify(data));
   // Convert interval to milliseconds
   const intervalMs = convertIntervalToMilliseconds(interval);
 
@@ -22,6 +23,8 @@ function groupDataByTime(data, interval) {
     // Add the item to the corresponding time group
     groupedData[time].push(item);
   }
+  console.log("groupedData: ", groupedData);
+  fs.writeFileSync("groupedData.json", JSON.stringify(groupedData));
 
   //convert groupedData to array
   let groupedDataArray = [];
@@ -39,6 +42,7 @@ function groupDataByTime(data, interval) {
       Volume: item.reduce((acc, item) => acc + +item.Volume, 0),
     };
   });
+  fs.writeFileSync("mapData.json", JSON.stringify(mapData));
   return mapData;
 }
 
@@ -92,7 +96,7 @@ function getTimeGroup(time, dateString, intervalMs) {
   return groupedTimeWithDate;
 }
 
-const groupedData = groupDataByTime(data, "4h");
+// const groupedData = groupDataByTime(data, "5m");
 // console.log("groupedData: ", groupedData);
 
 // fs.writeFileSync("groupedDataArray.json", JSON.stringify(groupedDataArray));

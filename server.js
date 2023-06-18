@@ -38,7 +38,6 @@ const Stochastic = require("technicalindicators").Stochastic;
 const WilliamsR = require("technicalindicators").WilliamsR;
 const MACD = require("technicalindicators").MACD;
 const query = require("./common/query");
-const { convertToTimeFrame } = require("./convertInterval");
 var whitelist = ["http://103.196.144.131:5001"];
 var corsOptions = {
   origin: function (origin, callback) {
@@ -351,6 +350,7 @@ cron.schedule("3 */5 * * * *", () => {
 
 async function getIntradayOhlc() {
   let listData = await query("SELECT symbol from data");
+  let interval = "5m";
   for (let i = 0; i < listData.length; i++) {
     let isStoch = false;
     let isRSI = false;
@@ -616,6 +616,7 @@ startDaily();
 
 async function getDaily() {
   let listData = await query("SELECT symbol from data");
+  let interval = "5m";
   for (let i = 0; i < listData.length; i++) {
     let isStoch = false;
     let isRSI = false;

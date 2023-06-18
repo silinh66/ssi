@@ -47,110 +47,113 @@ async function getDailyOhlc() {
 
 async function getVNMData() {
   let symbol = "VNM";
-  let fromDate = moment().subtract(403, "days").format("DD/MM/YYYY");
-  let toDate = moment().subtract(373, "days").format("DD/MM/YYYY");
+  let fromDate = moment().subtract(402, "days").format("DD/MM/YYYY");
+  let toDate = moment().subtract(372, "days").format("DD/MM/YYYY");
   let response = await axios.get(
     `http://localhost:3020/IntradayOhlc?symbol=${symbol}&fromDate=${fromDate}&toDate=${toDate}`
   );
-  let listSymbol = response.data.data ? response.data.data : [];
-  fromDate = moment().subtract(372, "days").format("DD/MM/YYYY");
-  toDate = moment().subtract(342, "days").format("DD/MM/YYYY");
+  let listSymbol = response.data.data ? response.data.data.reverse() : [];
+  fromDate = moment().subtract(371, "days").format("DD/MM/YYYY");
+  toDate = moment().subtract(341, "days").format("DD/MM/YYYY");
   response = await axios.get(
     `http://localhost:3020/IntradayOhlc?symbol=${symbol}&fromDate=${fromDate}&toDate=${toDate}`
   );
   listSymbol = response.data.data
-    ? [...listSymbol, ...response.data.data]
+    ? [...listSymbol, ...response.data.data.reverse()]
     : listSymbol;
-  fromDate = moment().subtract(341, "days").format("DD/MM/YYYY");
-  toDate = moment().subtract(311, "days").format("DD/MM/YYYY");
+  fromDate = moment().subtract(340, "days").format("DD/MM/YYYY");
+  toDate = moment().subtract(310, "days").format("DD/MM/YYYY");
   response = await axios.get(
     `http://localhost:3020/IntradayOhlc?symbol=${symbol}&fromDate=${fromDate}&toDate=${toDate}`
   );
   listSymbol = response.data.data
-    ? [...listSymbol, ...response.data.data]
+    ? [...listSymbol, ...response.data.data.reverse()]
     : listSymbol;
-  fromDate = moment().subtract(310, "days").format("DD/MM/YYYY");
-  toDate = moment().subtract(280, "days").format("DD/MM/YYYY");
+  fromDate = moment().subtract(309, "days").format("DD/MM/YYYY");
+  toDate = moment().subtract(279, "days").format("DD/MM/YYYY");
   response = await axios.get(
     `http://localhost:3020/IntradayOhlc?symbol=${symbol}&fromDate=${fromDate}&toDate=${toDate}`
   );
   listSymbol = response.data.data
-    ? [...listSymbol, ...response.data.data]
+    ? [...listSymbol, ...response.data.data.reverse()]
     : listSymbol;
-  fromDate = moment().subtract(279, "days").format("DD/MM/YYYY");
-  toDate = moment().subtract(249, "days").format("DD/MM/YYYY");
+  fromDate = moment().subtract(278, "days").format("DD/MM/YYYY");
+  toDate = moment().subtract(248, "days").format("DD/MM/YYYY");
   response = await axios.get(
     `http://localhost:3020/IntradayOhlc?symbol=${symbol}&fromDate=${fromDate}&toDate=${toDate}`
   );
   listSymbol = response.data.data
-    ? [...listSymbol, ...response.data.data]
+    ? [...listSymbol, ...response.data.data.reverse()]
     : listSymbol;
-  fromDate = moment().subtract(248, "days").format("DD/MM/YYYY");
-  toDate = moment().subtract(218, "days").format("DD/MM/YYYY");
+  fromDate = moment().subtract(247, "days").format("DD/MM/YYYY");
+  toDate = moment().subtract(217, "days").format("DD/MM/YYYY");
   response = await axios.get(
     `http://localhost:3020/IntradayOhlc?symbol=${symbol}&fromDate=${fromDate}&toDate=${toDate}`
   );
   listSymbol = response.data.data
-    ? [...listSymbol, ...response.data.data]
+    ? [...listSymbol, ...response.data.data.reverse()]
     : listSymbol;
-  fromDate = moment().subtract(217, "days").format("DD/MM/YYYY");
-  toDate = moment().subtract(187, "days").format("DD/MM/YYYY");
+  fromDate = moment().subtract(216, "days").format("DD/MM/YYYY");
+  toDate = moment().subtract(186, "days").format("DD/MM/YYYY");
   response = await axios.get(
     `http://localhost:3020/IntradayOhlc?symbol=${symbol}&fromDate=${fromDate}&toDate=${toDate}`
   );
   listSymbol = response.data.data
-    ? [...listSymbol, ...response.data.data]
+    ? [...listSymbol, ...response.data.data.reverse()]
     : listSymbol;
-  fromDate = moment().subtract(186, "days").format("DD/MM/YYYY");
-  toDate = moment().subtract(156, "days").format("DD/MM/YYYY");
+  fromDate = moment().subtract(185, "days").format("DD/MM/YYYY");
+  toDate = moment().subtract(155, "days").format("DD/MM/YYYY");
   response = await axios.get(
     `http://localhost:3020/IntradayOhlc?symbol=${symbol}&fromDate=${fromDate}&toDate=${toDate}`
   );
   listSymbol = response.data.data
-    ? [...listSymbol, ...response.data.data]
+    ? [...listSymbol, ...response.data.data.reverse()]
     : listSymbol;
-  fromDate = moment().subtract(155, "days").format("DD/MM/YYYY");
-  toDate = moment().subtract(125, "days").format("DD/MM/YYYY");
+  fromDate = moment().subtract(154, "days").format("DD/MM/YYYY");
+  toDate = moment().subtract(124, "days").format("DD/MM/YYYY");
   response = await axios.get(
     `http://localhost:3020/IntradayOhlc?symbol=${symbol}&fromDate=${fromDate}&toDate=${toDate}`
   );
   listSymbol = response.data.data
-    ? [...listSymbol, ...response.data.data]
+    ? [...listSymbol, ...response.data.data.reverse()]
     : listSymbol;
-  fromDate = moment().subtract(124, "days").format("DD/MM/YYYY");
-  toDate = moment().subtract(94, "days").format("DD/MM/YYYY");
+  fromDate = moment().subtract(123, "days").format("DD/MM/YYYY");
+  toDate = moment().subtract(93, "days").format("DD/MM/YYYY");
   response = await axios.get(
     `http://localhost:3020/IntradayOhlc?symbol=${symbol}&fromDate=${fromDate}&toDate=${toDate}`
   );
   listSymbol = response.data.data
-    ? [...listSymbol, ...response.data.data]
+    ? [...listSymbol, ...response.data.data.reverse()]
     : listSymbol;
-  fromDate = moment().subtract(93, "days").format("DD/MM/YYYY");
-  toDate = moment().subtract(63, "days").format("DD/MM/YYYY");
+  fromDate = moment().subtract(92, "days").format("DD/MM/YYYY");
+  toDate = moment().subtract(62, "days").format("DD/MM/YYYY");
   response = await axios.get(
     `http://localhost:3020/IntradayOhlc?symbol=${symbol}&fromDate=${fromDate}&toDate=${toDate}`
   );
   listSymbol = response.data.data
-    ? [...listSymbol, ...response.data.data]
+    ? [...listSymbol, ...response.data.data.reverse()]
     : listSymbol;
-  fromDate = moment().subtract(62, "days").format("DD/MM/YYYY");
-  toDate = moment().subtract(32, "days").format("DD/MM/YYYY");
+  fromDate = moment().subtract(61, "days").format("DD/MM/YYYY");
+  toDate = moment().subtract(31, "days").format("DD/MM/YYYY");
   response = await axios.get(
     `http://localhost:3020/IntradayOhlc?symbol=${symbol}&fromDate=${fromDate}&toDate=${toDate}`
   );
   listSymbol = response.data.data
-    ? [...listSymbol, ...response.data.data]
+    ? [...listSymbol, ...response.data.data.reverse()]
     : listSymbol;
 
-  fromDate = moment().subtract(31, "days").format("DD/MM/YYYY");
-  toDate = moment().subtract(1, "days").format("DD/MM/YYYY");
+  fromDate = moment().subtract(30, "days").format("DD/MM/YYYY");
+  toDate = moment().subtract(0, "days").format("DD/MM/YYYY");
   response = await axios.get(
     `http://localhost:3020/IntradayOhlc?symbol=${symbol}&fromDate=${fromDate}&toDate=${toDate}`
   );
+
   listSymbol = response.data.data
-    ? [...listSymbol, ...response.data.data]
+    ? [...listSymbol, ...response.data.data.reverse()]
     : listSymbol;
-  listSymbol = groupDataByTime(listSymbol, "2h");
+  fs.writeFileSync("dataLastDay.json", JSON.stringify(response.data.data));
+  fs.writeFileSync("data1m.json", JSON.stringify(listSymbol));
+  listSymbol = groupDataByTime(listSymbol, "5m");
   let bPrices = listSymbol
     ? listSymbol.map((item, index) => {
         return {
@@ -169,9 +172,9 @@ async function getVNMData() {
     return +item.close;
   });
   console.log("length: ", mapPrices.length);
-  if (mapPrices[mapPrices.length - 1] === 0) {
-    mapPrices.pop();
-  }
+  // if (mapPrices[mapPrices.length - 1] === 0) {
+  //   mapPrices.pop();
+  // }
 
   // console.log(`symbol: ${symbol}, mapPrices: ${mapPrices.length}`);
   // console.log("mapPrices: ", mapPrices);
