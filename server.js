@@ -485,7 +485,7 @@ async function getIntradayOhlc() {
     let mapPrices = bPrices.map((item, index) => {
       return +item.close;
     });
-    console.log("length: ", mapPrices.length);
+    // console.log("length: ", mapPrices.length);
     if (mapPrices[mapPrices.length - 1] === 0) {
       mapPrices.pop();
     }
@@ -535,7 +535,7 @@ async function getIntradayOhlc() {
     let rsi = RSI.calculate({ period: 14, values: mapPrices });
     let curRSI = rsi[rsi.length - 1];
     // fs.writeFileSync("mapPrice.txt", mapPrices.reverse().join("\n"));
-    console.log("rsi: ", rsi.reverse());
+    // console.log("rsi: ", rsi.reverse());
     let lineRSI = `${moment().format(
       "HH:mm:ss"
     )}-${interval}-${symbol}-${JSON.stringify(curRSI)}\n`;
@@ -751,7 +751,7 @@ async function getDaily() {
     let mapPrices = bPrices.map((item, index) => {
       return +item.close;
     });
-    console.log("length: ", mapPrices.length);
+    // console.log("length: ", mapPrices.length);
     if (mapPrices[mapPrices.length - 1] === 0) {
       mapPrices.pop();
     }
@@ -800,8 +800,27 @@ async function getDaily() {
     //RSI
     let rsi = RSI.calculate({ period: 14, values: mapPrices });
     let curRSI = rsi[rsi.length - 1];
+    let symbolRSI = await query("SELECT * from rsi WHERE symbol = ?", [symbol]);
+    if (symbolRSI.length > 0) {
+      await query("UPDATE rsi SET value = ?,date=?,time=?  WHERE symbol = ?", [
+        curRSI ? curRSI.toString() : "",
+        moment().format("DD/MM/YYYY"),
+        moment().format("HH:mm:ss"),
+        symbol,
+      ]);
+    } else {
+      await query(
+        "INSERT INTO rsi (symbol, value, date, time) VALUES (?,?,?,?)",
+        [
+          symbol,
+          curRSI ? curRSI.toString() : "",
+          moment().format("DD/MM/YYYY"),
+          moment().format("HH:mm:ss"),
+        ]
+      );
+    }
     // fs.writeFileSync("mapPrice.txt", mapPrices.reverse().join("\n"));
-    console.log("rsi: ", rsi.reverse());
+    // console.log("rsi: ", rsi.reverse());
     let lineRSI = `${moment().format(
       "HH:mm:ss"
     )}-${interval}-${symbol}-${JSON.stringify(curRSI)}\n`;
